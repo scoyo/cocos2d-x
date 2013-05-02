@@ -37,7 +37,6 @@ rm -rf "${TARGET_DIR}/cocos2dx/kazmath" && \
 \
 rm -rf "${TARGET_DIR}/cocos2dx/platform/third_party" && \
 \
-echo test1 && \
 mv "${TARGET_DIR}/cocos2dx/include/"* "${TARGET_DIR}" && \
 \
 rm -rf "${TARGET_DIR}/cocos2dx/proj."* && \

@@ -12,9 +12,11 @@ if [ ! -d "${TARGET_DIR}" ]; then
 fi
 
 if [ ! -n "$2" ]; then
+echo Run for default
 
-rm -rf "/tmp/cocostmp"
-cp -r "${LIBS_DIR}/" "/tmp/cocostmp" && \
+rm -rf "/tmp/cocostmp" && \
+mkdir -p "/tmp/cocostmp" && \
+cp -r "${LIBS_DIR}/cocos2dx" "${LIBS_DIR}/extensions" "${LIBS_DIR}/external" "${LIBS_DIR}/CocosDenshion" "/tmp/cocostmp/" && \
 find "/tmp/cocostmp" -type d -iname "*.xcodeproj" -delete && \
 find "/tmp/cocostmp" -type f ! -iname "*.h" -delete && \
 mv "/tmp/cocostmp/"* "${TARGET_DIR}" && \
@@ -35,6 +37,7 @@ rm -rf "${TARGET_DIR}/cocos2dx/kazmath" && \
 \
 rm -rf "${TARGET_DIR}/cocos2dx/platform/third_party" && \
 \
+echo test1 && \
 mv "${TARGET_DIR}/cocos2dx/include/"* "${TARGET_DIR}" && \
 \
 rm -rf "${TARGET_DIR}/cocos2dx/proj."* && \
@@ -48,6 +51,7 @@ find "${TARGET_DIR}" -type d -empty | xargs rmdir && \
 find "${TARGET_DIR}" -type d -empty | xargs rmdir
 
 elif [ $2 = "ios" ]; then
+echo Run for ios
 
 rm -rf "/tmp/cocostmp"  && \
 mkdir "/tmp/cocostmp" && \
@@ -69,6 +73,7 @@ cp -rf "/tmp/cocostmp/"* "${TARGET_DIR}" && \
 rm -rf "/tmp/cocostmp"
 
 elif [ $2 = "android" ]; then
+echo Run for android
 
 rm -rf "/tmp/cocostmp"  && \
 mkdir "/tmp/cocostmp" && \

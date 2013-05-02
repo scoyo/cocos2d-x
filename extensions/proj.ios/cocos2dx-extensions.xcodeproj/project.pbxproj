@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0500903E17327B5800217A50 /* libCocosDenshion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0500902B173274C100217A50 /* libCocosDenshion.a */; };
 		05D0883B173253A80029226C /* AssetsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05D087C4173253A70029226C /* AssetsManager.cpp */; };
 		05D0883C173253A80029226C /* AssetsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D087C5173253A70029226C /* AssetsManager.h */; };
 		05D0883D173253A80029226C /* CCBAnimationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05D087C7173253A70029226C /* CCBAnimationManager.cpp */; };
@@ -434,7 +435,25 @@
 		D43F7F8A15C7D8BA00D713FC /* CCTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D43F7F8915C7D8BA00D713FC /* CCTouch.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0500902A173274C100217A50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0500902017325B9F00217A50 /* CocosDenshion.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D87CC2E5154FC6C500AAFE11;
+			remoteInfo = CocosDenshion;
+		};
+		0500903A173278CC00217A50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0500902017325B9F00217A50 /* CocosDenshion.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D87CC2E4154FC6C500AAFE11;
+			remoteInfo = CocosDenshion;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0500902017325B9F00217A50 /* CocosDenshion.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocosDenshion.xcodeproj; path = ../../CocosDenshion/proj.ios/CocosDenshion.xcodeproj; sourceTree = SOURCE_ROOT; };
 		05D087C4173253A70029226C /* AssetsManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssetsManager.cpp; sourceTree = "<group>"; };
 		05D087C5173253A70029226C /* AssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsManager.h; sourceTree = "<group>"; };
 		05D087C7173253A70029226C /* CCBAnimationManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCBAnimationManager.cpp; sourceTree = "<group>"; };
@@ -546,8 +565,8 @@
 		05D08838173253A80029226C /* CCPhysicsDebugNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPhysicsDebugNode.h; sourceTree = "<group>"; };
 		05D08839173253A80029226C /* CCPhysicsSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCPhysicsSprite.cpp; sourceTree = "<group>"; };
 		05D0883A173253A80029226C /* CCPhysicsSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPhysicsSprite.h; sourceTree = "<group>"; };
-		05D088AA173253F50029226C /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
-		05D088AB173253F50029226C /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebp.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libwebp.a; sourceTree = "<group>"; };
+		05D088AA173253F50029226C /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = SOURCE_ROOT; };
+		05D088AB173253F50029226C /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebp.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libwebp.a; sourceTree = SOURCE_ROOT; };
 		05D088AF173254120029226C /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
 		05D088B0173254120029226C /* curlbuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlbuild.h; sourceTree = "<group>"; };
 		05D088B1173254120029226C /* curlrules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlrules.h; sourceTree = "<group>"; };
@@ -870,6 +889,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0500903E17327B5800217A50 /* libCocosDenshion.a in Frameworks */,
 				1551A343158F2AB200E66CFE /* Foundation.framework in Frameworks */,
 				05D088AC173253F50029226C /* libcurl.a in Frameworks */,
 				05D088AD173253F50029226C /* libwebp.a in Frameworks */,
@@ -879,6 +899,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0500901F17325B8600217A50 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				05D088AE173254120029226C /* curl */,
+				05D088AA173253F50029226C /* libcurl.a */,
+				05D088B8173254120029226C /* webp */,
+				05D088AB173253F50029226C /* libwebp.a */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		050090271732702800217A50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0500902B173274C100217A50 /* libCocosDenshion.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		05D087C2173253880029226C /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1085,7 +1124,7 @@
 			);
 			name = curl;
 			path = ../../cocos2dx/platform/third_party/ios/curl;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		05D088B8173254120029226C /* webp */ = {
 			isa = PBXGroup;
@@ -1096,14 +1135,16 @@
 			);
 			name = webp;
 			path = ../../cocos2dx/platform/third_party/ios/webp;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1551A334158F2AB200E66CFE = {
 			isa = PBXGroup;
 			children = (
+				0500902017325B9F00217A50 /* CocosDenshion.xcodeproj */,
 				1551A873158F2B4700E66CFE /* cocos2dx-extensions-Prefix.pch */,
 				05D087C2173253880029226C /* extensions */,
 				1551A353158F2ADE00E66CFE /* cocos2dx */,
+				0500901F17325B8600217A50 /* libs */,
 				1551A341158F2AB200E66CFE /* Frameworks */,
 				1551A340158F2AB200E66CFE /* Products */,
 			);
@@ -1120,10 +1161,6 @@
 		1551A341158F2AB200E66CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				05D088AE173254120029226C /* curl */,
-				05D088B8173254120029226C /* webp */,
-				05D088AA173253F50029226C /* libcurl.a */,
-				05D088AB173253F50029226C /* libwebp.a */,
 				1551A342158F2AB200E66CFE /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -1998,6 +2035,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0500903B173278CC00217A50 /* PBXTargetDependency */,
 			);
 			name = "cocos2dx-extensions";
 			productName = cocos2dx;
@@ -2011,7 +2049,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = "厦门雅基软件有限公司";
+				ORGANIZATIONNAME = scoyo;
 			};
 			buildConfigurationList = 1551A339158F2AB200E66CFE /* Build configuration list for PBXProject "cocos2dx-extensions" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2023,12 +2061,28 @@
 			mainGroup = 1551A334158F2AB200E66CFE;
 			productRefGroup = 1551A340158F2AB200E66CFE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 050090271732702800217A50 /* Products */;
+					ProjectRef = 0500902017325B9F00217A50 /* CocosDenshion.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1551A33E158F2AB200E66CFE /* cocos2dx-extensions */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0500902B173274C100217A50 /* libCocosDenshion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCocosDenshion.a;
+			remoteRef = 0500902A173274C100217A50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1551A33B158F2AB200E66CFE /* Sources */ = {
@@ -2221,11 +2275,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0500903B173278CC00217A50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocosDenshion;
+			targetProxy = 0500903A173278CC00217A50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		1551A34A158F2AB200E66CFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2249,7 +2311,7 @@
 		1551A34B158F2AB200E66CFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2281,13 +2343,14 @@
 					"COCOS2D_DEBUG=1",
 				);
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/..\"",
-					"\"$(SRCROOT)/../kazmath/include\"",
+					"\"$(SRCROOT)/../../cocos2dx\"",
+					"\"$(SRCROOT)/../../cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios\"",
+					"\"$(SRCROOT)/../../CocosDenshion/include\"",
 					"\"$(SDKROOT)/usr/include/libxml2\"",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios/libraries\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -2308,13 +2371,14 @@
 					CC_TARGET_OS_IPHONE,
 				);
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/..\"",
-					"\"$(SRCROOT)/../kazmath/include\"",
+					"\"$(SRCROOT)/../../cocos2dx\"",
+					"\"$(SRCROOT)/../../cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios\"",
+					"\"$(SRCROOT)/../../CocosDenshion/include\"",
 					"\"$(SDKROOT)/usr/include/libxml2\"",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios/libraries\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";

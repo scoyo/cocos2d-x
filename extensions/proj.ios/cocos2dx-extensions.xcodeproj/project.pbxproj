@@ -1142,8 +1142,8 @@
 			children = (
 				0500902017325B9F00217A50 /* CocosDenshion.xcodeproj */,
 				1551A873158F2B4700E66CFE /* cocos2dx-extensions-Prefix.pch */,
-				05D087C2173253880029226C /* extensions */,
 				1551A353158F2ADE00E66CFE /* cocos2dx */,
+				05D087C2173253880029226C /* extensions */,
 				0500901F17325B8600217A50 /* libs */,
 				1551A341158F2AB200E66CFE /* Frameworks */,
 				1551A340158F2AB200E66CFE /* Products */,

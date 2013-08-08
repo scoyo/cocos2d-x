@@ -361,7 +361,7 @@ void EditBoxImplIOS::setFont(const char* pFontName, int fontSize)
     float scaleFactor = EGLView::getInstance()->getScaleX();
     UIFont *textFont = nil;
     if (isValidFontName) {
-        textFont = [UIFont fontWithName:fntName size:fontSize * scaleFactor / retinaFactor];
+        textFont = [UIFont fontWithName:[fntName stringByReplacingOccurrencesOfString:@".ttf" withString:@""] size:fontSize * scaleFactor / retinaFactor];
     }
     
     if (!isValidFontName || textFont == nil){

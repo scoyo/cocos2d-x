@@ -2293,6 +2293,7 @@
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
 					"COCOS2D_DEBUG=1",
+					"CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../cocos2dx\"",
@@ -2319,6 +2320,7 @@
 					COCOS2D_JAVASCRIPT,
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
+					"CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../cocos2dx\"",

@@ -132,6 +132,11 @@ static const int CC_EDIT_BOX_PADDING = 5;
     if (sender == textField_) {
         [sender resignFirstResponder];
     }
+    cocos2d::extension::CCEditBoxDelegate* pDelegate = getEditBoxImplIOS()->getDelegate();
+    if (pDelegate != NULL)
+    {
+      pDelegate->editBoxReturn(getEditBoxImplIOS()->getCCEditBox());
+    }
     return NO;
 }
 
@@ -175,7 +180,6 @@ static const int CC_EDIT_BOX_PADDING = 5;
     if (pDelegate != NULL)
     {
         pDelegate->editBoxEditingDidEnd(getEditBoxImplIOS()->getCCEditBox());
-        pDelegate->editBoxReturn(getEditBoxImplIOS()->getCCEditBox());
     }
     
     cocos2d::extension::CCEditBox*  pEditBox= getEditBoxImplIOS()->getCCEditBox();

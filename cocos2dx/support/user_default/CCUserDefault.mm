@@ -22,6 +22,7 @@
  THE SOFTWARE.
  ****************************************************************************/
 
+#import <Foundation/Foundation.h>
 #import "CCUserDefault.h"
 #import <string>
 #import "platform/CCFileUtils.h"

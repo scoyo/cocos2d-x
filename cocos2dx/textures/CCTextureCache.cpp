@@ -816,11 +816,17 @@ void VolatileTexture::removeTexture(CCTexture2D *t)
     }
 }
 
+bool VolatileTexture::compareTexturesByUName (VolatileTexture* vt1, VolatileTexture* vt2)
+{
+  return vt1->texture->getName() < vt2->texture->getName();
+}
+
 void VolatileTexture::reloadAllTextures()
 {
     isReloading = true;
 
     CCLOG("reload all texture");
+    textures.sort(compareTexturesByUName);
     std::list<VolatileTexture *>::iterator iter = textures.begin();
 
     while (iter != textures.end())
@@ -866,7 +872,7 @@ void VolatileTexture::reloadAllTextures()
             break;
         case kImageData:
             {
-                vt->texture->initWithData(vt->m_pTextureData, 
+                vt->texture->initWithData(vt->m_pTextureData,
                                           vt->m_PixelFormat, 
                                           vt->m_TextureSize.width, 
                                           vt->m_TextureSize.height, 

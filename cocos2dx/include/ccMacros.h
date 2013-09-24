@@ -233,12 +233,13 @@ It should work same as apples CFSwapInt32LittleToHost(..)
 #define CHECK_GL_ERROR_DEBUG()
 #else
 #define CHECK_GL_ERROR_DEBUG() \
+    {GLenum __error; \
     do { \
-        GLenum __error = glGetError(); \
-        if(__error) { \
-            CCLog("OpenGL error 0x%04X in %s %s %d\n", __error, __FILE__, __FUNCTION__, __LINE__); \
-        } \
-    } while (false)
+      __error = glGetError(); \
+      if(__error) { \
+        CCLog("OpenGL error 0x%04X in %s %s %d\n", __error, __FILE__, __FUNCTION__, __LINE__); \
+      } \
+    } while (__error);}
 #endif
 
 /** @def CC_INCREMENT_GL_DRAWS_BY_ONE

@@ -192,11 +192,12 @@ public:
     static void setTexParameters(CCTexture2D *t, ccTexParams *texParams);
     static void removeTexture(CCTexture2D *t);
     static void reloadAllTextures();
+    static bool compareTexturesByUName(VolatileTexture* vt1, VolatileTexture* vt2);
 
 public:
     static std::list<VolatileTexture*> textures;
     static bool isReloading;
-    
+
 private:
     // find VolatileTexture by CCTexture2D*
     // if not found, create a new one
@@ -204,7 +205,7 @@ private:
 
 protected:
     CCTexture2D *texture;
-    
+
     CCImage *uiImage;
 
     ccCachedImageType m_eCashedImageType;

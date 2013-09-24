@@ -380,6 +380,7 @@ void CCEditBoxImplIOS::setFontColor(const ccColor3B& color)
 {
     m_systemControl.textField.textColor = [UIColor colorWithRed:color.r / 255.0f green:color.g / 255.0f blue:color.b / 255.0f alpha:1.0f];
 	m_pLabel->setColor(color);
+  [[m_systemControl.textField valueForKey:@"textInputTraits"] setValue:[UIColor colorWithRed:color.r / 255.0f green:color.g / 255.0f blue:color.b / 255.0f alpha:1.0f] forKey:@"insertionPointColor"]; 
 }
 
 void CCEditBoxImplIOS::setPlaceholderFont(const char* pFontName, int fontSize)

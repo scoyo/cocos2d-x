@@ -314,7 +314,7 @@ void CCEditBoxImplIOS::initInactiveLabels(const CCSize& size)
     m_pLabelPlaceHolder = CCLabelTTF::create("", "", 0.0f);
 	// align the text vertically center
     m_pLabelPlaceHolder->setAnchorPoint(ccp(0, 0.5f));
-    m_pLabelPlaceHolder->setColor(ccGRAY);
+    m_pLabelPlaceHolder->setColor(ccc3(178, 178, 178));
     m_pEditBox->addChild(m_pLabelPlaceHolder, kLabelZOrder);
     
     setFont(pDefaultFontName, size.height*2/3);

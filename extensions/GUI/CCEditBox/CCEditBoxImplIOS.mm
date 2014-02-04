@@ -385,7 +385,7 @@ void EditBoxImplIOS::setFont(const char* pFontName, int fontSize)
 void EditBoxImplIOS::setFontColor(const Color3B& color)
 {
     _systemControl.textField.textColor = [UIColor colorWithRed:color.r / 255.0f green:color.g / 255.0f blue:color.b / 255.0f alpha:1.0f];
-	_pLabel->setColor(color);
+	  _label->setColor(color);
     [[_systemControl.textField valueForKey:@"textInputTraits"] setValue:[UIColor colorWithRed:color.r / 255.0f green:color.g / 255.0f blue:color.b / 255.0f alpha:1.0f] forKey:@"insertionPointColor"]; 
 }
 

@@ -263,7 +263,8 @@ void ScrollView::setZoomScale(float s)
         }
         
         oldCenter = _container->convertToNodeSpace(center);
-        _container->setScale(MAX(_minScale, MIN(_maxScale, s)));
+        // BUGFIX: m_fMinScale and m_fMaxScale are always 1 - disable zooming
+        //_container->setScale(MAX(_minScale, MIN(_maxScale, s)));
         newCenter = _container->convertToWorldSpace(oldCenter);
         
         const Point offset = center - newCenter;

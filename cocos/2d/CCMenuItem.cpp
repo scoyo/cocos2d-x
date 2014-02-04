@@ -113,6 +113,7 @@ void MenuItem::unselected()
 
 void MenuItem::activate()
 {
+    retain();
     if (_enabled)
     {
         if( _callback )
@@ -127,6 +128,7 @@ void MenuItem::activate()
             ScriptEngineManager::getInstance()->getScriptEngine()->sendEvent(&scriptEvent);
         }
     }
+    release();
 }
 
 void MenuItem::setEnabled(bool enabled)

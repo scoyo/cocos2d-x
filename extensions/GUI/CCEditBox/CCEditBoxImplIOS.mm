@@ -320,7 +320,7 @@ void EditBoxImplIOS::initInactiveLabels(const Size& size)
     _labelPlaceHolder = LabelTTF::create("", "", 0.0f);
 	// align the text vertically center
     _labelPlaceHolder->setAnchorPoint(Point(0, 0.5f));
-    _labelPlaceHolder->setColor(ccc3(178, 178, 178));
+    _labelPlaceHolder->setColor(Color3B(178, 178, 178));
     _editBox->addChild(_labelPlaceHolder, kLabelZOrder);
     
     setFont(pDefaultFontName, size.height*2/3);

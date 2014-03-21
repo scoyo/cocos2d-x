@@ -78,6 +78,7 @@ static const int CC_EDIT_BOX_PADDING = 5;
         textField_.borderStyle = UITextBorderStyleNone;
         textField_.delegate = self;
         textField_.hidden = true;
+      textField_.backgroundColor=[UIColor redColor];
 		textField_.returnKeyType = UIReturnKeyDefault;
         [textField_ addTarget:self action:@selector(textChanged) forControlEvents:UIControlEventEditingChanged];
         self.editBox = editBox;
@@ -279,17 +280,7 @@ bool CCEditBoxImplIOS::initWithSize(const CCSize& size)
 {
     do 
     {
-        CCEGLViewProtocol* eglView = CCEGLView::sharedOpenGLView();
-
-        CGRect rect = CGRectMake(0, 0, size.width * eglView->getScaleX(),size.height * eglView->getScaleY());
-
-        if (m_bInRetinaMode)
-        {
-            rect.size.width /= 2.0f;
-            rect.size.height /= 2.0f;
-        }
-        
-        m_systemControl = [[EditBoxImplIOS alloc] initWithFrame:rect editBox:this];
+        m_systemControl = [[EditBoxImplIOS alloc] initWithFrame:CGRectZero editBox:this];
         if (!m_systemControl) break;
         
 		initInactiveLabels(size);
@@ -556,8 +547,16 @@ void CCEditBoxImplIOS::setContentSize(const CCSize& size)
     m_tContentSize = size;
     CCLOG("[Edit text] content size = (%f, %f)", size.width, size.height);
     placeInactiveLabels();
-    CCEGLViewProtocol* eglView = CCEGLView::sharedOpenGLView();
-    CGSize controlSize = CGSizeMake(size.width * eglView->getScaleX(),size.height * eglView->getScaleY());
+  
+    float scaleFactor = CCEGLView::sharedOpenGLView()->getScaleX();
+  
+    CCNode* parent = m_pEditBox;
+    scaleFactor = scaleFactor * parent->getScale();
+    while ((parent = parent->getParent()) != NULL) {
+      scaleFactor = scaleFactor * parent->getScale();
+    }
+  
+    CGSize controlSize = CGSizeMake(size.width * scaleFactor,size.height * scaleFactor);
     
     if (m_bInRetinaMode)
     {

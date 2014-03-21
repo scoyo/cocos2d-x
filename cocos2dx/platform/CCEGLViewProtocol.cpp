@@ -193,12 +193,12 @@ const char* CCEGLViewProtocol::getViewName()
     return m_szViewName;
 }
 
-void CCEGLViewProtocol::handleTouchesBegin(int num, int ids[], float xs[], float ys[])
+void CCEGLViewProtocol::handleTouchesBegin(int num, long ids[], float xs[], float ys[])
 {
     CCSet set;
     for (int i = 0; i < num; ++i)
     {
-        int id = ids[i];
+        long id = ids[i];
         float x = xs[i];
         float y = ys[i];
 
@@ -238,12 +238,12 @@ void CCEGLViewProtocol::handleTouchesBegin(int num, int ids[], float xs[], float
     m_pDelegate->touchesBegan(&set, NULL);
 }
 
-void CCEGLViewProtocol::handleTouchesMove(int num, int ids[], float xs[], float ys[])
+void CCEGLViewProtocol::handleTouchesMove(int num, long ids[], float xs[], float ys[])
 {
     CCSet set;
     for (int i = 0; i < num; ++i)
     {
-        int id = ids[i];
+        long id = ids[i];
         float x = xs[i];
         float y = ys[i];
 
@@ -279,11 +279,11 @@ void CCEGLViewProtocol::handleTouchesMove(int num, int ids[], float xs[], float 
     m_pDelegate->touchesMoved(&set, NULL);
 }
 
-void CCEGLViewProtocol::getSetOfTouchesEndOrCancel(CCSet& set, int num, int ids[], float xs[], float ys[])
+void CCEGLViewProtocol::getSetOfTouchesEndOrCancel(CCSet& set, int num, long ids[], float xs[], float ys[])
 {
     for (int i = 0; i < num; ++i)
     {
-        int id = ids[i];
+        long id = ids[i];
         float x = xs[i];
         float y = ys[i];
 
@@ -313,7 +313,7 @@ void CCEGLViewProtocol::getSetOfTouchesEndOrCancel(CCSet& set, int num, int ids[
         } 
         else
         {
-            CCLOG("Ending touches with id: %d error", id);
+            CCLOG("Ending touches with id: %ld error", id);
             return;
         } 
 
@@ -326,14 +326,14 @@ void CCEGLViewProtocol::getSetOfTouchesEndOrCancel(CCSet& set, int num, int ids[
     }
 }
 
-void CCEGLViewProtocol::handleTouchesEnd(int num, int ids[], float xs[], float ys[])
+void CCEGLViewProtocol::handleTouchesEnd(int num, long ids[], float xs[], float ys[])
 {
     CCSet set;
     getSetOfTouchesEndOrCancel(set, num, ids, xs, ys);
     m_pDelegate->touchesEnded(&set, NULL);
 }
 
-void CCEGLViewProtocol::handleTouchesCancel(int num, int ids[], float xs[], float ys[])
+void CCEGLViewProtocol::handleTouchesCancel(int num, long ids[], float xs[], float ys[])
 {
     CCSet set;
     getSetOfTouchesEndOrCancel(set, num, ids, xs, ys);

@@ -78,7 +78,6 @@ static const int CC_EDIT_BOX_PADDING = 5;
         textField_.borderStyle = UITextBorderStyleNone;
         textField_.delegate = self;
         textField_.hidden = true;
-      textField_.backgroundColor=[UIColor redColor];
 		textField_.returnKeyType = UIReturnKeyDefault;
         [textField_ addTarget:self action:@selector(textChanged) forControlEvents:UIControlEventEditingChanged];
         self.editBox = editBox;

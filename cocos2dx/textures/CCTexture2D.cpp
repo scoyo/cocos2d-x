@@ -205,7 +205,10 @@ bool CCTexture2D::initWithData(const void *data, CCTexture2DPixelFormat pixelFor
         glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     }
 
-
+    if (m_uName != 0)
+    {
+      ccGLDeleteTexture(m_uName);
+    }
     glGenTextures(1, &m_uName);
     ccGLBindTexture2D(m_uName);
 
@@ -695,7 +698,11 @@ bool CCTexture2D::initWithPVRFile(const char* file)
 {
     bool bRet = false;
     // nothing to do with CCObject::init
-    
+   
+    if (m_uName != 0)
+    {
+      ccGLDeleteTexture(m_uName);
+    } 
     CCTexturePVR *pvr = new CCTexturePVR;
     bRet = pvr->initWithContentsOfFile(file);
         

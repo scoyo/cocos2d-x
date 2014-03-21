@@ -517,6 +517,9 @@
 		050754CC18DC6F40008803CA /* CCTouchHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 050753CF18DC6F40008803CA /* CCTouchHandler.h */; };
 		050754D218DC7338008803CA /* libwebsockets.h in Headers */ = {isa = PBXBuildFile; fileRef = 050754CF18DC7338008803CA /* libwebsockets.h */; };
 		050754D318DC7338008803CA /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050754D118DC7338008803CA /* libwebsockets.a */; };
+		050754F518DC97C4008803CA /* libwebsockets_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050754F418DC97C4008803CA /* libwebsockets_arm64.a */; };
+		050754F818DC97D5008803CA /* libcurl_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050754F618DC97D5008803CA /* libcurl_arm64.a */; };
+		050754F918DC97D5008803CA /* libwebp_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050754F718DC97D5008803CA /* libwebp_arm64.a */; };
 		05C033FE17F1D5D4001B310D /* CCImageCommon_cpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C033FC17F1D5D4001B310D /* CCImageCommon_cpp.h */; };
 		05C033FF17F1D5D4001B310D /* CCThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C033FD17F1D5D4001B310D /* CCThread.cpp */; };
 		05D0883B173253A80029226C /* AssetsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05D087C4173253A70029226C /* AssetsManager.cpp */; };
@@ -1178,6 +1181,9 @@
 		050753CF18DC6F40008803CA /* CCTouchHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTouchHandler.h; sourceTree = "<group>"; };
 		050754CF18DC7338008803CA /* libwebsockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libwebsockets.h; path = include/libwebsockets.h; sourceTree = "<group>"; };
 		050754D118DC7338008803CA /* libwebsockets.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebsockets.a; path = ../../external/libwebsockets/ios/lib/libwebsockets.a; sourceTree = "<group>"; };
+		050754F418DC97C4008803CA /* libwebsockets_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebsockets_arm64.a; path = ../../external/libwebsockets/ios/lib/libwebsockets_arm64.a; sourceTree = "<group>"; };
+		050754F618DC97D5008803CA /* libcurl_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl_arm64.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl_arm64.a; sourceTree = "<group>"; };
+		050754F718DC97D5008803CA /* libwebp_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebp_arm64.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libwebp_arm64.a; sourceTree = "<group>"; };
 		05C033FC17F1D5D4001B310D /* CCImageCommon_cpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCImageCommon_cpp.h; sourceTree = "<group>"; };
 		05C033FD17F1D5D4001B310D /* CCThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCThread.cpp; sourceTree = "<group>"; };
 		05D087C4173253A70029226C /* AssetsManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssetsManager.cpp; sourceTree = "<group>"; };
@@ -1317,8 +1323,11 @@
 			files = (
 				0500903E17327B5800217A50 /* libCocosDenshion.a in Frameworks */,
 				05D088AC173253F50029226C /* libcurl.a in Frameworks */,
+				050754F818DC97D5008803CA /* libcurl_arm64.a in Frameworks */,
 				05D088AD173253F50029226C /* libwebp.a in Frameworks */,
 				050754D318DC7338008803CA /* libwebsockets.a in Frameworks */,
+				050754F518DC97C4008803CA /* libwebsockets_arm64.a in Frameworks */,
+				050754F918DC97D5008803CA /* libwebp_arm64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1330,10 +1339,13 @@
 			children = (
 				050754CD18DC7338008803CA /* libwebsockets */,
 				050754D118DC7338008803CA /* libwebsockets.a */,
+				050754F418DC97C4008803CA /* libwebsockets_arm64.a */,
 				05D088AE173254120029226C /* curl */,
 				05D088AA173253F50029226C /* libcurl.a */,
+				050754F618DC97D5008803CA /* libcurl_arm64.a */,
 				05D088B8173254120029226C /* webp */,
 				05D088AB173253F50029226C /* libwebp.a */,
+				050754F718DC97D5008803CA /* libwebp_arm64.a */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -3524,14 +3536,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios/libraries\"",
-					"\"$(SRCROOT)/../../external/libwebsockets/ios/lib",
+					"\"$(SRCROOT)/../../external/libwebsockets/ios/lib\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				"OTHER_LDFLAGS[arch=arm64]" = (
-					"-lcurl_arm64",
-					"-lwebp_arm64",
-					"-lwebsockets_arm64",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -3557,7 +3564,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios/libraries\"",
-					"\"$(SRCROOT)/../../external/libwebsockets/ios/lib",
+					"\"$(SRCROOT)/../../external/libwebsockets/ios/lib\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -3527,6 +3527,11 @@
 					"\"$(SRCROOT)/../../external/libwebsockets/ios/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=arm64]" = (
+					"-lcurl_arm64",
+					"-lwebp_arm64",
+					"-lwebsockets_arm64",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

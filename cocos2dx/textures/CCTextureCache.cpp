@@ -699,11 +699,6 @@ CCTexture2D* CCTextureCache::textureForKey(const char* key)
     return (CCTexture2D*)m_pTextures->objectForKey(CCFileUtils::sharedFileUtils()->fullPathForFilename(key));
 }
 
-bool VolatileTexture::compareTexturesByUName (VolatileTexture* vt1, VolatileTexture* vt2)
-{
-  return vt1->texture->getName() < vt2->texture->getName();
-}
-
 void CCTextureCache::reloadAllTextures()
 {
 #if CC_ENABLE_CACHE_TEXTURE_DATA
@@ -877,6 +872,11 @@ void VolatileTexture::removeTexture(CCTexture2D *t)
             break;
         }
     }
+}
+
+bool VolatileTexture::compareTexturesByUName (VolatileTexture* vt1, VolatileTexture* vt2)
+{
+  return vt1->texture->getName() < vt2->texture->getName();
 }
 
 void VolatileTexture::reloadAllTextures()

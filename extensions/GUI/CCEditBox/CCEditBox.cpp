@@ -53,6 +53,8 @@ CCEditBox::~CCEditBox(void)
 
 void CCEditBox::touchDownAction(CCObject *sender, CCControlEvent controlEvent)
 {
+    m_pEditBoxImpl->setPosition(getPosition());
+    m_pEditBoxImpl->setFont(m_strFontName.c_str(), m_nFontSize);
     m_pEditBoxImpl->openKeyboard();
 }
 

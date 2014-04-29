@@ -181,7 +181,6 @@ static const int CC_EDIT_BOX_PADDING = 5;
     if (pDelegate != NULL)
     {
         pDelegate->editBoxEditingDidEnd(getEditBoxImplIOS()->getCCEditBox());
-        pDelegate->editBoxReturn(getEditBoxImplIOS()->getCCEditBox());
     }
     
     cocos2d::extension::CCEditBox*  pEditBox= getEditBoxImplIOS()->getCCEditBox();

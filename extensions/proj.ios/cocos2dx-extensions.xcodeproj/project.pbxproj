@@ -747,7 +747,7 @@
 		05FC7DE6195C705D003FC943 /* CCScrollViewLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollViewLoader.h; sourceTree = "<group>"; };
 		05FC7DE7195C705D003FC943 /* CCSpriteLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSpriteLoader.cpp; sourceTree = "<group>"; };
 		05FC7DE8195C705D003FC943 /* CCSpriteLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteLoader.h; sourceTree = "<group>"; };
-		05FC7DE9195C705D003FC943 /* cocos-ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "cocos-ext.h"; path = "../../../../../../../../cocos2d-x/extensions/cocos-ext.h"; sourceTree = "<group>"; };
+		05FC7DE9195C705D003FC943 /* cocos-ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos-ext.h"; sourceTree = "<group>"; };
 		05FC7DEC195C705D003FC943 /* CCActionEaseEx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionEaseEx.cpp; sourceTree = "<group>"; };
 		05FC7DED195C705D003FC943 /* CCActionEaseEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionEaseEx.h; sourceTree = "<group>"; };
 		05FC7DEE195C705D003FC943 /* CCActionFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionFrame.cpp; sourceTree = "<group>"; };
@@ -919,8 +919,8 @@
 		05FC7EB7195C705D003FC943 /* TriggerMng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriggerMng.h; sourceTree = "<group>"; };
 		05FC7EB8195C705D003FC943 /* TriggerObj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TriggerObj.cpp; sourceTree = "<group>"; };
 		05FC7EB9195C705D003FC943 /* TriggerObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriggerObj.h; sourceTree = "<group>"; };
-		05FC7EBA195C705D003FC943 /* ExtensionExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtensionExport.h; path = "../../../../../../../../cocos2d-x/extensions/ExtensionExport.h"; sourceTree = "<group>"; };
-		05FC7EBB195C705D003FC943 /* ExtensionMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtensionMacros.h; path = "../../../../../../../../cocos2d-x/extensions/ExtensionMacros.h"; sourceTree = "<group>"; };
+		05FC7EBA195C705D003FC943 /* ExtensionExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionExport.h; sourceTree = "<group>"; };
+		05FC7EBB195C705D003FC943 /* ExtensionMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionMacros.h; sourceTree = "<group>"; };
 		05FC7EBE195C705D003FC943 /* CCControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCControl.cpp; sourceTree = "<group>"; };
 		05FC7EBF195C705D003FC943 /* CCControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControl.h; sourceTree = "<group>"; };
 		05FC7EC0195C705D003FC943 /* CCControlButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCControlButton.cpp; sourceTree = "<group>"; };
@@ -1424,8 +1424,7 @@
 				05FC7DB2195C705C003FC943 /* AssetsManager.cpp */,
 				05FC7DB3195C705C003FC943 /* AssetsManager.h */,
 			);
-			name = AssetsManager;
-			path = "../../../../../../../../cocos2d-x/extensions/AssetsManager";
+			path = AssetsManager;
 			sourceTree = "<group>";
 		};
 		05FC7DB4195C705C003FC943 /* CCBReader */ = {
@@ -1484,8 +1483,7 @@
 				05FC7DE7195C705D003FC943 /* CCSpriteLoader.cpp */,
 				05FC7DE8195C705D003FC943 /* CCSpriteLoader.h */,
 			);
-			name = CCBReader;
-			path = "../../../../../../../../cocos2d-x/extensions/CCBReader";
+			path = CCBReader;
 			sourceTree = "<group>";
 		};
 		05FC7DEA195C705D003FC943 /* CocoStudio */ = {
@@ -1500,8 +1498,7 @@
 				05FC7E81195C705D003FC943 /* Reader */,
 				05FC7EB1195C705D003FC943 /* Trigger */,
 			);
-			name = CocoStudio;
-			path = "../../../../../../../../cocos2d-x/extensions/CocoStudio";
+			path = CocoStudio;
 			sourceTree = "<group>";
 		};
 		05FC7DEB195C705D003FC943 /* Action */ = {
@@ -1962,8 +1959,7 @@
 				05FC7ED7195C705D003FC943 /* CCEditBox */,
 				05FC7EEA195C705D003FC943 /* CCScrollView */,
 			);
-			name = GUI;
-			path = "../../../../../../../../cocos2d-x/extensions/GUI";
+			path = GUI;
 			sourceTree = "<group>";
 		};
 		05FC7EBD195C705D003FC943 /* CCControlExtension */ = {
@@ -2034,8 +2030,7 @@
 				05FC7EF5195C705D003FC943 /* LocalStorage.h */,
 				05FC7EF6195C705D003FC943 /* LocalStorageAndroid.cpp */,
 			);
-			name = LocalStorage;
-			path = "../../../../../../../../cocos2d-x/extensions/LocalStorage";
+			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 		05FC7EF7195C705D003FC943 /* network */ = {
@@ -2048,8 +2043,7 @@
 				05FC7EFC195C705D003FC943 /* WebSocket.cpp */,
 				05FC7EFD195C705D003FC943 /* WebSocket.h */,
 			);
-			name = network;
-			path = "../../../../../../../../cocos2d-x/extensions/network";
+			path = network;
 			sourceTree = "<group>";
 		};
 		05FC7F00195C705D003FC943 /* physics_nodes */ = {
@@ -2060,8 +2054,7 @@
 				05FC7F03195C705D003FC943 /* CCPhysicsSprite.cpp */,
 				05FC7F04195C705D003FC943 /* CCPhysicsSprite.h */,
 			);
-			name = physics_nodes;
-			path = "../../../../../../../../cocos2d-x/extensions/physics_nodes";
+			path = physics_nodes;
 			sourceTree = "<group>";
 		};
 		05FC7F05195C705D003FC943 /* spine */ = {
@@ -2111,8 +2104,7 @@
 				05FC7F2F195C705D003FC943 /* spine-cocos2dx.h */,
 				05FC7F30195C705D003FC943 /* spine.h */,
 			);
-			name = spine;
-			path = "../../../../../../../../cocos2d-x/extensions/spine";
+			path = spine;
 			sourceTree = "<group>";
 		};
 		05FC8082195C7097003FC943 /* actions */ = {
@@ -2145,8 +2137,7 @@
 				05FC809B195C7097003FC943 /* CCActionTween.cpp */,
 				05FC809C195C7097003FC943 /* CCActionTween.h */,
 			);
-			name = actions;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/actions";
+			path = actions;
 			sourceTree = "<group>";
 		};
 		05FC809D195C7097003FC943 /* base_nodes */ = {
@@ -2159,8 +2150,7 @@
 				05FC80A2195C7097003FC943 /* CCNode.cpp */,
 				05FC80A3195C7097003FC943 /* CCNode.h */,
 			);
-			name = base_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/base_nodes";
+			path = base_nodes;
 			sourceTree = "<group>";
 		};
 		05FC80A4195C7097003FC943 /* cocoa */ = {
@@ -2193,8 +2183,7 @@
 				05FC80BD195C7097003FC943 /* CCZone.cpp */,
 				05FC80BE195C7097003FC943 /* CCZone.h */,
 			);
-			name = cocoa;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/cocoa";
+			path = cocoa;
 			sourceTree = "<group>";
 		};
 		05FC80BF195C7097003FC943 /* draw_nodes */ = {
@@ -2205,8 +2194,7 @@
 				05FC80C2195C7097003FC943 /* CCDrawNode.cpp */,
 				05FC80C3195C7097003FC943 /* CCDrawNode.h */,
 			);
-			name = draw_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/draw_nodes";
+			path = draw_nodes;
 			sourceTree = "<group>";
 		};
 		05FC80C4195C7097003FC943 /* effects */ = {
@@ -2217,8 +2205,7 @@
 				05FC80C7195C7097003FC943 /* CCGrid.cpp */,
 				05FC80C8195C7097003FC943 /* CCGrid.h */,
 			);
-			name = effects;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/effects";
+			path = effects;
 			sourceTree = "<group>";
 		};
 		05FC80C9195C7097003FC943 /* include */ = {
@@ -2232,8 +2219,7 @@
 				05FC80CF195C7097003FC943 /* ccTypes.h */,
 				05FC80D0195C7097003FC943 /* cocos2d.h */,
 			);
-			name = include;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/include";
+			path = include;
 			sourceTree = "<group>";
 		};
 		05FC80D1195C7097003FC943 /* kazmath */ = {
@@ -2243,7 +2229,7 @@
 				05FC80E3195C7097003FC943 /* src */,
 			);
 			name = kazmath;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/kazmath";
+			path = "kazmath";
 			sourceTree = "<group>";
 		};
 		05FC80D2195C7097003FC943 /* include */ = {
@@ -2322,7 +2308,7 @@
 				05FC80F8195C7097003FC943 /* CCKeypadDispatcher.h */,
 			);
 			name = keypad_dispatcher;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/keypad_dispatcher";
+			path = "keypad_dispatcher";
 			sourceTree = "<group>";
 		};
 		05FC80F9195C7097003FC943 /* label_nodes */ = {
@@ -2336,7 +2322,7 @@
 				05FC80FF195C7097003FC943 /* CCLabelTTF.h */,
 			);
 			name = label_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/label_nodes";
+			path = "label_nodes";
 			sourceTree = "<group>";
 		};
 		05FC8100195C7097003FC943 /* layers_scenes_transitions_nodes */ = {
@@ -2354,7 +2340,7 @@
 				05FC810A195C7097003FC943 /* CCTransitionProgress.h */,
 			);
 			name = layers_scenes_transitions_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/layers_scenes_transitions_nodes";
+			path = "layers_scenes_transitions_nodes";
 			sourceTree = "<group>";
 		};
 		05FC810B195C7097003FC943 /* menu_nodes */ = {
@@ -2366,7 +2352,7 @@
 				05FC810F195C7097003FC943 /* CCMenuItem.h */,
 			);
 			name = menu_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/menu_nodes";
+			path = "menu_nodes";
 			sourceTree = "<group>";
 		};
 		05FC8110195C7097003FC943 /* misc_nodes */ = {
@@ -2382,7 +2368,7 @@
 				05FC8118195C7097003FC943 /* CCRenderTexture.h */,
 			);
 			name = misc_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/misc_nodes";
+			path = "misc_nodes";
 			sourceTree = "<group>";
 		};
 		05FC8119195C7097003FC943 /* particle_nodes */ = {
@@ -2399,7 +2385,7 @@
 				05FC8122195C7097003FC943 /* firePngData.h */,
 			);
 			name = particle_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/particle_nodes";
+			path = "particle_nodes";
 			sourceTree = "<group>";
 		};
 		05FC8123195C7097003FC943 /* script_support */ = {
@@ -2409,7 +2395,7 @@
 				05FC8125195C7098003FC943 /* CCScriptSupport.h */,
 			);
 			name = script_support;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/script_support";
+			path = "script_support";
 			sourceTree = "<group>";
 		};
 		05FC8126195C7098003FC943 /* shaders */ = {
@@ -2442,7 +2428,7 @@
 				05FC813F195C7098003FC943 /* precompiled */,
 			);
 			name = shaders;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/shaders";
+			path = "shaders";
 			sourceTree = "<group>";
 		};
 		05FC813F195C7098003FC943 /* precompiled */ = {
@@ -2487,7 +2473,7 @@
 				05FC8150195C7098003FC943 /* CCSpriteFrameCache.h */,
 			);
 			name = sprite_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/sprite_nodes";
+			path = "sprite_nodes";
 			sourceTree = "<group>";
 		};
 		05FC8151195C7098003FC943 /* support */ = {
@@ -2517,7 +2503,7 @@
 				05FC8177195C7098003FC943 /* zip_support */,
 			);
 			name = support;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/support";
+			path = "support";
 			sourceTree = "<group>";
 		};
 		05FC8160195C7098003FC943 /* component */ = {
@@ -2594,7 +2580,7 @@
 				05FC8183195C7098003FC943 /* CCTextFieldTTF.h */,
 			);
 			name = text_input_node;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/text_input_node";
+			path = "text_input_node";
 			sourceTree = "<group>";
 		};
 		05FC8184195C7098003FC943 /* textures */ = {
@@ -2612,7 +2598,7 @@
 				05FC818E195C7098003FC943 /* CCTexturePVR.h */,
 			);
 			name = textures;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/textures";
+			path = "textures";
 			sourceTree = "<group>";
 		};
 		05FC818F195C7098003FC943 /* tilemap_parallax_nodes */ = {
@@ -2632,7 +2618,7 @@
 				05FC819B195C7098003FC943 /* CCTMXXMLParser.h */,
 			);
 			name = tilemap_parallax_nodes;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/tilemap_parallax_nodes";
+			path = "tilemap_parallax_nodes";
 			sourceTree = "<group>";
 		};
 		05FC819C195C7098003FC943 /* touch_dispatcher */ = {
@@ -2647,7 +2633,7 @@
 				05FC81A3195C7098003FC943 /* CCTouchHandler.h */,
 			);
 			name = touch_dispatcher;
-			path = "../../../../../../../../cocos2d-x/cocos2dx/touch_dispatcher";
+			path = "touch_dispatcher";
 			sourceTree = "<group>";
 		};
 		1551A334158F2AB200E66CFE = {

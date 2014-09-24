@@ -154,4 +154,11 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 
 -(void) doAnimationWhenKeyboardMoveWithDuration:(float) duration distance:(float) dis;
 -(void) doAnimationWhenAnotherEditBeClicked;
+
+/** for iOS8 always returns portrait orientation - needed for keyboard frame calculations 
+ @param statusBarOrientation original statusbar orientation
+ @return original status bar orientation, portrait orientation for iOS8 and greater
+ */
+-(UIInterfaceOrientation) getFixedOrientation: (UIInterfaceOrientation) statusBarOrientation;
+
 @end

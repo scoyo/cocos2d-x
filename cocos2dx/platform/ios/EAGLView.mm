@@ -743,7 +743,7 @@ static EAGLView *view = 0;
     CGSize viewSize = self.frame.size;
     CGFloat tmp;
     
-    switch ([[UIApplication sharedApplication] statusBarOrientation])
+    switch ([self getFixedOrientation: [[UIApplication sharedApplication] statusBarOrientation]])
     {
         case UIInterfaceOrientationPortrait:
             begin.origin.y = viewSize.height - begin.origin.y - begin.size.height;
@@ -879,7 +879,7 @@ static EAGLView *view = 0;
         dis /= 2.0f;
     }
     
-    switch ([[UIApplication sharedApplication] statusBarOrientation])
+    switch ([self getFixedOrientation: [[UIApplication sharedApplication] statusBarOrientation]])
     {
         case UIInterfaceOrientationPortrait:
             self.frame = CGRectMake(originalRect_.origin.x, originalRect_.origin.y - dis, originalRect_.size.width, originalRect_.size.height);
@@ -911,6 +911,14 @@ static EAGLView *view = 0;
     {
         [[NSNotificationCenter defaultCenter]postNotification:self.keyboardShowNotification];
     }
+}
+
+-(UIInterfaceOrientation) getFixedOrientation: (UIInterfaceOrientation) statusBarOrientation
+{
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+  { statusBarOrientation = UIInterfaceOrientationPortrait;
+  }
+  return statusBarOrientation;
 }
 
 @end
